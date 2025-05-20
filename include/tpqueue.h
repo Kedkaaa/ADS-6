@@ -46,7 +46,7 @@ class TPQueue {
 
         // Иначе ищем подходящее место
         Node* current = head;
-        while (current->nextElem && current->nextElem->data.prior >= /
+        while (current->nextElem && current->nextElem->data.prior >= \
           value.prior) {
             current = current->nextElem;
         }
@@ -85,7 +85,7 @@ class TPQueue {
     void print() const {
         Node* current = head;
         while (current) {
-            std::cout << current->data.ch << " (priority " << /
+            std::cout << current->data.ch << " (priority " << \
               current->data.prior << ") -> ";
             current = current->nextElem;
         }
