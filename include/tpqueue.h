@@ -1,18 +1,19 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
-
+#include <iostream> 
 #include <stdexcept>
 
 struct SYM {
   char ch;
   int prior;
-  SYM(char c = '\0', int p = 0) : ch(c), prior(p) {}
+  explicit SYM(char c = '\0', int p = 0) : ch(c), prior(p) {}
 };
 
 template<typename T>
 class TPQueue {
-private:
+
+ private:
     struct Node {
         T data;
         Node* nextElem;
@@ -21,7 +22,7 @@ private:
 
     Node* head;
 
-public:
+ public:
     TPQueue() : head(nullptr) {}
 
     ~TPQueue() {
